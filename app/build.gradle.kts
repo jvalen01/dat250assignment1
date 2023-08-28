@@ -25,6 +25,12 @@ dependencies {
     implementation("com.google.guava:guava:32.1.1-jre")
 
     implementation("io.javalin:javalin:5.6.2") // Replace with the version you want
+
+    // SLF4J API dependency
+    implementation ("org.slf4j:slf4j-api:1.7.30") // Adjust the version if needed
+
+    // Logback dependency (one of the logging frameworks behind SLF4J)
+    implementation ("ch.qos.logback:logback-classic:1.2.3") // Adjust the version if needed
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
