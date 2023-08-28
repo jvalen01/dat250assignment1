@@ -7,8 +7,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    @Test
+    public void testInchesToFeetConversion() {
+        double result = App.convertUnit(12, "in", "ft");
+        assertEquals(1, result, 0.001); // Tolerating small error
+    }
+
+    @Test
+    public void testFeetToMilesConversion() {
+        double result = App.convertUnit(5280, "ft", "mi");
+        assertEquals(1, result, 0.001);
     }
 }
